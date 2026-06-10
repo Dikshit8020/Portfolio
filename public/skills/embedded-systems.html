@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Embedded Systems & Firmware — Dikshit Maloo</title>
+<meta name="description" content="Deep dive into Dikshit Maloo's embedded systems skills — STM32, ESP32, 8051, FreeRTOS, bare-metal firmware, DMA, interrupts, and peripheral drivers.">
+<link rel="stylesheet" href="../css/design-system.css">
+<link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body class="col-cyan">
+<div id="loading-screen"><div class="loader"><div class="loader-text">Loading...</div></div></div>
+<div id="cur"></div><div id="cur-t"></div>
+<div class="grid-bg"></div><div class="noise"></div><div class="scan"></div><div id="prog"></div>
+<nav>
+  <a class="nav-logo" href="../index.html"><div class="nav-dot"></div>DM</a>
+  <ul class="nav-links"><li><a href="../index.html#skills" class="active">Skills</a></li><li><a href="../index.html#projects">Projects</a></li><li><a href="../index.html#contact">Contact</a></li></ul>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <a class="nav-btn" href="../index.html">← Back</a>
+</nav>
+<div class="mobile-menu"><a href="../index.html">Home</a><a href="../index.html#skills">Skills</a><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></div>
+<button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+<div class="breadcrumb"><a class="bc-link" href="../index.html">Home</a><span class="bc-sep">/</span><a class="bc-link" href="../index.html#skills">Skills</a><span class="bc-sep">/</span><span class="bc-cur">Embedded Systems</span></div>
+
+<div class="sk-hero">
+  <div class="dhbg dhbg-robot"></div>
+  <div class="dh-orb" style="background:var(--cyan)"></div>
+  <div class="sk-inner">
+    <div class="dh-cat">Core Skill · 4+ Years Experience</div>
+    <h1 class="dh-title">Embedded Systems<br><span style="color:var(--cyan)">&amp; Firmware</span></h1>
+    <p class="dh-desc" style="margin-bottom:1.5rem">My strongest domain. From bare-metal register programming to FreeRTOS multi-task architectures, I've written production firmware for thermal sensors, robotic arms, and optical communication systems.</p>
+    <div class="tags" style="margin-bottom:1.5rem"><span class="chip cc">STM32</span><span class="chip cc">ESP32</span><span class="chip cc">8051</span><span class="chip cg">FreeRTOS</span><span class="chip ca">Bare-Metal</span><span class="chip cv">RTOS</span><span class="chip cp">Embedded C</span></div>
+    <div class="sk-gauge-wrap">
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">STM32 (HAL + LL)</span><span class="sk-gp">90%</span></div><div class="sk-gt"><div class="sk-gf" data-width="90"></div></div></div>
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">ESP32 (Arduino + IDF)</span><span class="sk-gp">88%</span></div><div class="sk-gt"><div class="sk-gf" data-width="88"></div></div></div>
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">8051 (Bare-Metal)</span><span class="sk-gp">80%</span></div><div class="sk-gt"><div class="sk-gf" data-width="80"></div></div></div>
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">FreeRTOS</span><span class="sk-gp">85%</span></div><div class="sk-gt"><div class="sk-gf" data-width="85"></div></div></div>
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">Raspberry Pi</span><span class="sk-gp">75%</span></div><div class="sk-gt"><div class="sk-gf" data-width="75"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sk-wrap">
+
+  <div class="sk-sec rv">
+    <div class="sk-lbl">01 / Origin</div>
+    <h2 class="sk-title">How I Got Here</h2>
+    <div class="sk-body">
+      <p>Started in 2nd year with an <strong>8051 microcontroller</strong> — blinking LEDs, then reading ADC values from a temperature sensor. The moment I understood how <strong>timer interrupts</strong> work was when everything clicked. From there, I moved to STM32 — the jump from 8-bit to a Cortex-M4 at 168MHz with DMA, multi-timer, and hardware FPU was transformative.</p>
+      <p>My internship at Accurate Sensing Technologies cemented my skills. Writing calibration firmware for <strong>industrial thermal sensors</strong> — where a bug means a pyrometer reads 500°C when the actual temperature is 200°C — taught me the discipline of defensive programming, watchdog timers, and exhaustive boundary testing.</p>
+    </div>
+  </div>
+
+  <div class="sk-sec rv">
+    <div class="sk-lbl">02 / Platforms</div>
+    <h2 class="sk-title">Hardware I Work With</h2>
+    <div class="plat-grid">
+      <div class="plat-c"><div class="plat-ico">⚡</div><div class="plat-name">STM32F407</div><div class="plat-role">Primary MCU</div><div class="plat-desc">168MHz Cortex-M4. HAL + LL drivers. DMA, SPI, I2C, UART, CAN. Used in robotic arm (6 axis tasks via FreeRTOS).</div></div>
+      <div class="plat-c"><div class="plat-ico">📡</div><div class="plat-name">ESP32</div><div class="plat-role">IoT &amp; Wireless</div><div class="plat-desc">Dual-core Xtensa. Wi-Fi + BLE. Used in Li-Fi UART bridge and IoT sensor nodes. Arduino + ESP-IDF.</div></div>
+      <div class="plat-c"><div class="plat-ico">🔧</div><div class="plat-name">8051</div><div class="plat-role">Industrial Legacy</div><div class="plat-desc">AT89S52. Assembly &amp; Embedded C. Timer ISRs, serial comms, ADC interfacing. Used in internship for calibration tools.</div></div>
+      <div class="plat-c"><div class="plat-ico">🖥️</div><div class="plat-name">Raspberry Pi 4B</div><div class="plat-role">Edge Computing</div><div class="plat-desc">Linux, Python, TFLite. Used as processing hub for EMI system (FFT + ML inference at 12ms).</div></div>
+      <div class="plat-c"><div class="plat-ico">🎯</div><div class="plat-name">Arduino (ATmega)</div><div class="plat-role">Rapid Prototyping</div><div class="plat-desc">Quick prototyping and teaching. Used to validate sensor interfacing before porting to STM32.</div></div>
+      <div class="plat-c"><div class="plat-ico">🧩</div><div class="plat-name">Xilinx CPLD</div><div class="plat-role">Digital Logic</div><div class="plat-desc">CoolRunner-II CPLD. VHDL programming. Used for frequency hopping controller in EMI system.</div></div>
+    </div>
+  </div>
+
+  <div class="sk-sec rv">
+    <div class="sk-lbl">03 / Concepts I Can Discuss</div>
+    <h2 class="sk-title">Technical Knowledge</h2>
+    <div class="cc-grid">
+      <div class="cco"><div class="cco-dot" style="background:var(--cyan)"></div>Clock Tree Configuration</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--cyan)"></div>DMA Circular Buffers</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--cyan)"></div>Interrupt Priority / NVIC</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--cyan)"></div>FreeRTOS Tasks &amp; Queues</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--amber)"></div>SPI Timing &amp; Modes</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--amber)"></div>I2C Clock Stretching</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--amber)"></div>UART Framing &amp; Parity</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--amber)"></div>CAN Bus Arbitration</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--green)"></div>PWM / Timer Capture</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--green)"></div>ADC Oversampling</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--green)"></div>Watchdog Timers</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--green)"></div>Bootloader Basics</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--purple)"></div>Low-Power Modes</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--purple)"></div>Memory-Mapped I/O</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--purple)"></div>Linker Scripts &amp; Startup</div>
+      <div class="cco"><div class="cco-dot" style="background:var(--purple)"></div>Stack/Heap Analysis</div>
+    </div>
+  </div>
+
+  <div class="sk-sec rv">
+    <div class="sk-lbl">04 / Code Sample</div>
+    <h2 class="sk-title">Real Firmware I've Written</h2>
+    <div class="sk-body"><p>The FreeRTOS axis task from the robotic arm — each joint runs this template, receiving targets via a queue and signaling completion.</p></div>
+    <div class="cb">
+      <div class="cb-lbl"><span>// axis_task.c — FreeRTOS motor control</span><span>embedded_c</span></div>
+      <pre><span class="cm">/* One instance per axis (6 total).
+   Receives target via xAxisQueue[id].
+   Signals completion via EventGroup. */</span>
+
+<span class="ty">void</span> <span class="fn">vAxisTask</span>(<span class="ty">void</span> *pvParams) {
+    <span class="ty">AxisHandle_t</span> *ax = (<span class="ty">AxisHandle_t</span>*)pvParams;
+    <span class="ty">int32_t</span> target;
+
+    <span class="kw">for</span>(;;) {
+        xQueueReceive(xAxisQueue[ax->id],
+                      &target, portMAX_DELAY);
+
+        <span class="ty">int32_t</span> delta = target - ax->pos;
+        HAL_GPIO_WritePin(ax->dir_port,
+            ax->dir_pin,
+            delta > <span class="nm">0</span> ? GPIO_PIN_SET : GPIO_PIN_RESET);
+
+        <span class="kw">for</span>(<span class="ty">uint32_t</span> i = <span class="nm">0</span>; i < abs(delta); i++) {
+            HAL_GPIO_WritePin(ax->step_port,
+                ax->step_pin, GPIO_PIN_SET);
+            <span class="fn">delay_us</span>(ax->step_delay);
+            HAL_GPIO_WritePin(ax->step_port,
+                ax->step_pin, GPIO_PIN_RESET);
+            <span class="fn">delay_us</span>(ax->step_delay);
+        }
+
+        ax->pos = target;
+        xEventGroupSetBits(xDoneFlags,
+                           (<span class="nm">1</span> << ax->id));
+    }
+}</pre>
+    </div>
+  </div>
+
+  <!-- WORK SHOWCASE / MEDIA -->
+  <div class="sk-sec rv">
+    <div class="sk-lbl">05 / Work Showcase</div>
+    <h2 class="sk-title">My Embedded Work</h2>
+    <p class="sk-body" style="margin-bottom:1rem">Photos, oscilloscope captures, and screenshots of my embedded systems work.</p>
+    <!-- ADD YOUR IMAGES: Place in public/images/skills/ -->
+    <div class="media-gallery">
+      <div class="media-item" data-lightbox="embedded-work"><div class="imgp" style="height:180px"><div class="imgp-in"><div class="imgp-ico">📷</div><div class="imgp-txt">ADD: STM32 dev board setup<br>or firmware debugging photo</div></div></div><div class="media-overlay"><div class="media-caption">STM32F407 development setup</div></div><div class="media-zoom">🔍</div></div>
+      <div class="media-item" data-lightbox="embedded-work"><div class="imgp" style="height:180px"><div class="imgp-in"><div class="imgp-ico">📷</div><div class="imgp-txt">ADD: Oscilloscope capture<br>e.g. SPI waveform</div></div></div><div class="media-overlay"><div class="media-caption">SPI communication waveform analysis</div></div><div class="media-zoom">🔍</div></div>
+      <div class="media-item" data-lightbox="embedded-work"><div class="imgp" style="height:180px"><div class="imgp-in"><div class="imgp-ico">📷</div><div class="imgp-txt">ADD: Breadboard prototype<br>or PCB with MCU</div></div></div><div class="media-overlay"><div class="media-caption">Prototype circuit with ESP32</div></div><div class="media-zoom">🔍</div></div>
+    </div>
+  </div>
+
+  <div class="sk-sec rv">
+    <div class="sk-lbl">06 / Applied In</div>
+    <h2 class="sk-title">Projects Using This Skill</h2>
+    <div class="plc-grid">
+      <a class="plc" href="../projects/robotic-arm.html"><div><div class="plc-tag">STM32F407 + FreeRTOS</div><div class="plc-name">6-Axis Robotic Arm</div></div><div class="plc-arr">→</div></a>
+      <a class="plc" href="../projects/emi-system.html"><div><div class="plc-tag">NXP LPC4300 + RPi4</div><div class="plc-name">EMI/EMC Measurement System</div></div><div class="plc-arr">→</div></a>
+      <a class="plc" href="../projects/lifi.html"><div><div class="plc-tag">ESP32 UART Bridge</div><div class="plc-name">Li-Fi Optical Communication</div></div><div class="plc-arr">→</div></a>
+    </div>
+  </div>
+
+  <div class="pnav rv">
+    <a class="btn btn-g" href="../index.html#skills">← All Skills</a>
+    <a class="btn btn-g" href="pcb-design.html">Next: PCB Design →</a>
+  </div>
+</div>
+
+<footer><div class="fc">© 2025 Dikshit Maloo · Skill: Embedded Systems</div><div class="footer-social"><a href="../index.html">Home</a><a href="mailto:dixitjain9455@gmail.com">Email</a><a href="https://github.com/Dikshit8020" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/dikshit-maloo" target="_blank">LinkedIn</a></div></footer>
+<script src="../js/core.js"></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>

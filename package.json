@@ -1,0 +1,13 @@
+{
+  "name": "dikshit-portfolio",
+  "version": "1.0.0",
+  "description": "Electronics & Embedded Systems Portfolio — Dikshit Maloo",
+  "main": "api/server.js",
+  "scripts": {
+    "start": "node api/server.js",
+    "dev": "nodemon api/server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

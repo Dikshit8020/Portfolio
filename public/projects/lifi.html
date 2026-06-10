@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Li-Fi Optical Communication — Dikshit Maloo</title>
+  <meta name="description"
+    content="Bi-directional 1200-baud Li-Fi system using dual ESP32s and 650nm laser. Custom analog front-end with OPA388 TIA. B.Tech Major Project.">
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="../css/gallery.css">
+</head>
+
+<body class="col-purple">
+  <div id="loading-screen">
+    <div class="loader">
+      <div class="loader-text">Loading project...</div>
+    </div>
+  </div>
+  <div id="cur"></div>
+  <div id="cur-t"></div>
+  <div class="grid-bg"></div>
+  <div class="noise"></div>
+  <div class="scan"></div>
+  <div id="prog"></div>
+
+  <nav>
+    <a class="nav-logo" href="../index.html">
+      <div class="nav-dot"></div>DM
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#projects" class="active">Projects</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+    <div class="social-icons">
+      <a href="https://github.com/Dikshit8020" target="_blank" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+      <a href="https://www.linkedin.com/in/dikshit-maloo" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a class="nav-btn" href="../index.html">← Back</a>
+  </nav>
+  <div class="mobile-menu"><a href="../index.html">Home</a><a href="../index.html#skills">Skills</a><a
+      href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></div>
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <div class="breadcrumb"><a class="bc-link" href="../index.html">Home</a><span class="bc-sep">/</span><a
+      class="bc-link" href="../index.html#projects">Projects</a><span class="bc-sep">/</span><span class="bc-cur">Li-Fi
+      Optical Communication</span></div>
+
+  <div class="detail-hero">
+    <div class="dhbg dhbg-lifi"></div>
+    <div class="dh-orb" style="background:var(--purple)"></div>
+    <div class="dh-inner">
+      <div class="dh-cat">B.Tech Major Project · Hardware Design</div>
+      <h1 class="dh-title">Li-Fi Optical<br><span style="color:var(--purple)">Communication System</span></h1>
+      <div class="dh-meta">
+        <div class="dh-mi">
+          <div class="dh-ml">Role</div>
+          <div class="dh-mv" style="color:var(--amber)">Hardware Design Engineer</div>
+        </div>
+        <div class="dh-mi">
+          <div class="dh-ml">Duration</div>
+          <div class="dh-mv">6 Months · 2024–2025</div>
+        </div>
+        <div class="dh-mi">
+          <div class="dh-ml">Baud Rate</div>
+          <div class="dh-mv" style="color:var(--purple)">1200 Baud · Bi-directional</div>
+        </div>
+        <div class="dh-mi">
+          <div class="dh-ml">Medium</div>
+          <div class="dh-mv" style="color:var(--pink)">650nm Visible Laser</div>
+        </div>
+      </div>
+      <div class="tags" style="margin-bottom:1.3rem">
+        <span class="chip cv">ESP32</span><span class="chip cv">650nm Laser</span>
+        <span class="chip cc">OPA388 TIA</span><span class="chip cc">OPA350 Comparator</span>
+        <span class="chip ca">Analog Design</span><span class="chip ca">PCB Layout</span><span
+          class="chip cp">Li-Fi</span>
+      </div>
+      <p class="dh-desc">A fully custom bi-directional optical wireless communication link using visible light — no RF,
+        no Wi-Fi. Built from scratch: laser TX driver, high-sensitivity photodiode RX chain, power-rail protection
+        circuitry, and custom PCB. Achieved 1200 baud reliable data transfer over 5 metres.</p>
+    </div>
+  </div>
+
+  <div class="detail-wrap">
+
+    <div class="cs rv">
+      <div class="cs-num">01 / The Problem</div>
+      <h2 class="cs-title">Why Li-Fi?</h2>
+      <div class="cs-body">
+        <p>Radio frequency spectrum is finite and increasingly congested. Hospitals, aircraft, and secure facilities
+          restrict RF. Li-Fi — using light to carry data — offers a compelling alternative: <strong>immune to RF
+            interference, inherently confined to a room, theoretically terahertz of available bandwidth.</strong></p>
+        <p>The academic challenge: most Li-Fi research uses expensive avalanche photodiodes and lab-grade amplifiers.
+          Our goal was a working system using <strong>off-the-shelf components under ₹2,000 total</strong>.</p>
+      </div>
+      <div class="hb hb-i">
+        <div class="hb-lbl">What Makes This Hard</div>
+        <div class="hb-txt">A photodiode produces picoamperes of current from incident light. Amplifying that to a
+          usable digital signal without amplifying noise requires careful analog design — the right transimpedance
+          amplifier, minimal PCB stray capacitance, and clean power rails. Get any of these wrong and you amplify noise
+          more than signal.</div>
+      </div>
+    </div>
+
+    <div class="cs rv">
+      <div class="cs-num">02 / The Design</div>
+      <h2 class="cs-title">The Complete Signal Chain</h2>
+      <div class="cs-body">
+        <p>The system is two mirror-image nodes. Each has a TX path (ESP32 UART → laser driver → laser) and an RX path
+          (photodiode → TIA → comparator → ESP32 UART RX).</p>
+      </div>
+
+      <div
+        style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--muted);margin-bottom:.5rem;letter-spacing:.08em">
+        // TX PATH</div>
+      <div class="sigchain">
+        <div class="sc-bl">
+          <div class="sc-bt">ESP32 UART TX</div>
+          <div class="sc-bs">3.3V logic<br>1200 baud</div>
+        </div>
+        <div class="sc-arr">→</div>
+        <div class="sc-bl">
+          <div class="sc-bt">Laser Driver</div>
+          <div class="sc-bs">NPN transistor<br>Current limiting R</div>
+        </div>
+        <div class="sc-arr">→</div>
+        <div class="sc-bl" style="border-color:rgba(245,0,87,.3)">
+          <div class="sc-bt" style="color:#ff6090">650nm Laser</div>
+          <div class="sc-bs">5mW diode<br>Collimated beam</div>
+        </div>
+        <div class="sc-arr">~~→</div>
+        <div class="sc-bl">
+          <div class="sc-bt">Free Space</div>
+          <div class="sc-bs">Up to 5m<br>line-of-sight</div>
+        </div>
+      </div>
+
+      <div
+        style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--muted);margin-bottom:.5rem;margin-top:1rem;letter-spacing:.08em">
+        // RX PATH</div>
+      <div class="sigchain">
+        <div class="sc-bl">
+          <div class="sc-bt">Photodiode ×3</div>
+          <div class="sc-bs">BPW34 parallel<br>for area</div>
+        </div>
+        <div class="sc-arr">→</div>
+        <div class="sc-bl" style="border-color:rgba(0,229,255,.3)">
+          <div class="sc-bt" style="color:var(--cyan)">OPA388 TIA</div>
+          <div class="sc-bs">1MΩ feedback<br>Rail-to-rail</div>
+        </div>
+        <div class="sc-arr">→</div>
+        <div class="sc-bl" style="border-color:rgba(0,229,255,.3)">
+          <div class="sc-bt" style="color:var(--cyan)">OPA350 Comp.</div>
+          <div class="sc-bs">Schmitt trigger<br>Hysteresis</div>
+        </div>
+        <div class="sc-arr">→</div>
+        <div class="sc-bl">
+          <div class="sc-bt">ESP32 UART RX</div>
+          <div class="sc-bs">3.3V digital<br>Reconstructed</div>
+        </div>
+      </div>
+
+      <div class="hb hb-s" style="margin-top:1rem">
+        <div class="hb-lbl">Why OPA388 for the TIA?</div>
+        <div class="hb-txt">Zero-drift (0.25µV/°C offset) and rail-to-rail output — critical for a single-supply TIA
+          where the output needs to swing cleanly between 0V and 3.3V. 10MHz GBW is more than sufficient for 1200 baud.
+          The 1MΩ feedback resistor gives 1V/µA transimpedance gain — enough to swing 2V+ from a 2µA photodiode current
+          change at 5 metres.</div>
+      </div>
+    </div>
+
+    <div class="cs rv">
+      <div class="cs-num">03 / The Journey</div>
+      <h2 class="cs-title">Month by Month</h2>
+      <div class="jtl">
+        <div class="jt-item">
+          <div class="jt-dot"></div>
+          <div class="jt-wk">Month 1</div>
+          <div class="jt-title">Concept &amp; First Breadboard Test</div>
+          <div class="jt-body">Tested basic concept: ESP32 blinking an LED, photodiode + LM358 detecting it. Worked at
+            10cm, completely failed at 1m. The LM358's slow slew rate and non-rail-to-rail output were the bottleneck.
+          </div><span class="jt-out jt-fail">❌ Range: 10cm max. LM358 too slow.</span>
+        </div>
+        <div class="jt-item">
+          <div class="jt-dot"></div>
+          <div class="jt-wk">Month 2</div>
+          <div class="jt-title">Laser TX + OPA388 TIA Design</div>
+          <div class="jt-body">Switched from LED to 650nm laser — dramatically improves range due to collimation.
+            Designed OPA388 TIA with 1MΩ feedback and 10pF compensation capacitor. 1m range achieved, but signal had
+            noisy edges due to stray capacitance.</div><span class="jt-out jt-prog">⚡ Range improved to 1m. Signal
+            noisy.</span>
+        </div>
+        <div class="jt-item">
+          <div class="jt-dot"></div>
+          <div class="jt-wk">Month 3</div>
+          <div class="jt-title">Power Rail Voltage Spike Problem</div>
+          <div class="jt-body">When the laser driver transistor switched, it caused a 400mV spike on the 5V rail —
+            coupling into the TIA and corrupting the RX signal. Tried bulk capacitance (10µF + 100nF) — reduced to
+            200mV, not enough.</div><span class="jt-out jt-fail">❌ Voltage spikes corrupting RX signal</span>
+        </div>
+        <div class="jt-item">
+          <div class="jt-dot"></div>
+          <div class="jt-wk">Month 4</div>
+          <div class="jt-title">Inductive Kickback Root Cause &amp; Fix</div>
+          <div class="jt-body">Used oscilloscope to identify the spike source: inductive kickback from the laser diode's
+            bond wire inductance (~5nH) during NPN turn-off. Fixed with TVS diode (SMBJ5.0A) across laser + 10Ω series
+            resistor. Spikes reduced to &lt;20mV.</div><span class="jt-out jt-ok">✓ Clean power rail. RX signal
+            clean.</span>
+        </div>
+        <div class="jt-item">
+          <div class="jt-dot"></div>
+          <div class="jt-wk">Month 5</div>
+          <div class="jt-title">PCB Design &amp; Fabrication</div>
+          <div class="jt-body">Designed custom 2-layer PCB in KiCad. TIA input traces kept under 5mm. Analog and digital
+            grounds split, joined at single star point. JLCPCB fabricated. <strong>First revision worked</strong> — rare
+            for analog PCBs.</div><span class="jt-out jt-ok">✓ PCB functional on first revision</span>
+        </div>
+        <div class="jt-item">
+          <div class="jt-dot"></div>
+          <div class="jt-wk">Month 6</div>
+          <div class="jt-title">Bi-directional Operation &amp; Testing</div>
+          <div class="jt-body">Full-duplex using separate TX/RX laser paths. BER at 1200 baud over 0.5m to 5.5m. System
+            operates reliably up to 5m, BER &lt;0.1% in indoor lighting conditions.</div><span class="jt-out jt-ok">✓ 5m
+            range · BER &lt;0.1% · 1200 baud</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs rv">
+      <div class="cs-num">04 / Technical Deep Dive</div>
+      <h2 class="cs-title">The Analog Design Details</h2>
+      <div class="cb">
+        <div class="cb-lbl"><span>// ESP32 — UART-to-laser transmission</span><span>embedded_c / arduino</span></div>
+        <pre><span class="cm">// ESP32 transmits standard UART frames.
+// The laser driver circuit (NPN + TVS + R) handles
+// electrical-to-optical conversion transparently.</span>
+
+<span class="ty">const</span> <span class="ty">int</span> UART_TX_PIN  = <span class="nm">17</span>;
+<span class="ty">const</span> <span class="ty">int</span> UART_RX_PIN  = <span class="nm">16</span>;
+<span class="ty">const</span> <span class="ty">int</span> BAUD_RATE    = <span class="nm">1200</span>;
+
+<span class="ty">void</span> <span class="fn">setup</span>() {
+    <span class="cm">// Serial2 maps to the optical link</span>
+    Serial2.<span class="fn">begin</span>(BAUD_RATE, SERIAL_8N1,
+                  UART_RX_PIN, UART_TX_PIN);
+    Serial.<span class="fn">begin</span>(<span class="nm">115200</span>); <span class="cm">// Debug USB serial</span>
+}
+
+<span class="ty">void</span> <span class="fn">loop</span>() {
+    <span class="cm">// Echo received optical data to USB debug</span>
+    <span class="kw">while</span> (Serial2.<span class="fn">available</span>()) {
+        <span class="ty">char</span> c = Serial2.<span class="fn">read</span>();
+        Serial.<span class="fn">print</span>(c);
+    }
+    <span class="cm">// Send test pattern every 500ms</span>
+    <span class="kw">static</span> <span class="ty">uint32_t</span> last = <span class="nm">0</span>;
+    <span class="kw">if</span> (<span class="fn">millis</span>() - last > <span class="nm">500</span>) {
+        Serial2.<span class="fn">println</span>(<span class="st">"LIFI_OK"</span>);
+        last = <span class="fn">millis</span>();
+    }
+}</pre>
+      </div>
+      <div class="hb hb-i">
+        <div class="hb-lbl">Key Insight: Schmitt Trigger Hysteresis</div>
+        <div class="hb-txt">The OPA350 comparator uses 100kΩ / 1MΩ positive feedback for ~200mV hysteresis. Without
+          this, ambient light from fluorescent lighting (100Hz) caused false triggering. The hysteresis makes the output
+          snap decisively between 0 and 3.3V.</div>
+      </div>
+    </div>
+
+    <div class="cs rv">
+      <div class="cs-num">05 / Specifications</div>
+      <h2 class="cs-title">Measured Performance</h2>
+      <table class="spec-t">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Measured Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data Rate</td>
+            <td style="color:var(--purple)">1200 Baud (UART 8N1)</td>
+          </tr>
+          <tr>
+            <td>Operating Range</td>
+            <td style="color:var(--purple)">0.5m – 5.0m (indoor)</td>
+          </tr>
+          <tr>
+            <td>Bit Error Rate</td>
+            <td style="color:var(--green)">&lt; 0.1% at 5m, 0% at &lt;3m</td>
+          </tr>
+          <tr>
+            <td>Laser Wavelength</td>
+            <td style="color:var(--purple)">650nm (visible red)</td>
+          </tr>
+          <tr>
+            <td>Laser Power</td>
+            <td>5mW (Class IIIa)</td>
+          </tr>
+          <tr>
+            <td>TIA Gain</td>
+            <td>1 MΩ (1V per µA)</td>
+          </tr>
+          <tr>
+            <td>RX Sensitivity</td>
+            <td>~2 µA photocurrent (at 5m)</td>
+          </tr>
+          <tr>
+            <td>Supply</td>
+            <td>5V single (USB-powered)</td>
+          </tr>
+          <tr>
+            <td>PCB</td>
+            <td>2-layer, KiCad, JLCPCB</td>
+          </tr>
+          <tr>
+            <td>Total BOM Cost</td>
+            <td style="color:var(--amber)">~₹1,840 per node</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cs rv">
+      <div class="cs-num">06 / Results</div>
+      <h2 class="cs-title">What Was Achieved</h2>
+      <div class="rs">
+        <div class="rs-c"><span class="rs-n">5<span style="font-size:1.6rem">m</span></span>
+          <div class="rs-l">Operating Range</div>
+        </div>
+        <div class="rs-c"><span class="rs-n">&lt;0.1<span style="font-size:1.1rem">%</span></span>
+          <div class="rs-l">Bit Error Rate</div>
+        </div>
+        <div class="rs-c"><span class="rs-n">₹1.8<span style="font-size:1.3rem">k</span></span>
+          <div class="rs-l">Cost Per Node</div>
+        </div>
+      </div>
+      <div class="cs-body">
+        <p>The <strong>power-rail spike fix</strong> (TVS + series resistor) and the <strong>Schmitt trigger
+            hysteresis</strong> were the two critical design decisions that took it from barely-working to reliable.</p>
+        <p>Supervisor assessment: <em>"The analog front-end design shows genuine circuit engineering maturity —
+            component selection and PCB layout are both handled correctly, which is unusual for an undergraduate
+            project."</em></p>
+      </div>
+    </div>
+
+    <!-- MEDIA GALLERY -->
+    <div class="cs rv">
+      <div class="cs-num">07 / Gallery</div>
+      <h2 class="cs-title">Project <span style="color:var(--purple)">Media</span></h2>
+      <p class="cs-body" style="margin-bottom:1.5rem">33 photos and 14 videos of the Li-Fi hardware — PCB, enclosure, laser optics, oscilloscope captures, and live demo sessions.</p>
+
+      <div class="gallery-section">
+        <div class="section-label">📸 PROJECT IMAGES & VIDEOS</div>
+        <div class="drive-embed-container">
+          <iframe src="https://drive.google.com/embeddedfolderview?id=1L_GbQ4JuyXV2qwuFp5BtxL8-IuJByCP4#grid" loading="lazy"></iframe>
+        </div>
+        <a class="btn-view-all" href="https://drive.google.com/drive/folders/1L_GbQ4JuyXV2qwuFp5BtxL8-IuJByCP4?usp=share_link" target="_blank">📂 Open Full Gallery in Drive <span class="arrow">→</span></a>
+      </div>
+
+      <div class="gallery-section" style="margin-top:2.5rem">
+        <div class="section-label">📦 PROJECT RESOURCES</div>
+        <div class="resource-grid">
+          <a class="resource-card" href="https://drive.google.com/drive/folders/1L_GbQ4JuyXV2qwuFp5BtxL8-IuJByCP4" target="_blank">
+            <div class="resource-icon pdf">📄</div>
+            <div class="resource-info"><div class="resource-name">Research Paper</div><div class="resource-meta">Lifi Final Draft Main.pdf · 2.1 MB</div></div>
+            <div class="resource-arrow">→</div>
+          </a>
+          <a class="resource-card" href="https://drive.google.com/drive/folders/1L_GbQ4JuyXV2qwuFp5BtxL8-IuJByCP4" target="_blank">
+            <div class="resource-icon code">💻</div>
+            <div class="resource-info"><div class="resource-name">Arduino TX Source</div><div class="resource-meta">LI-FI_TX.ino + schematic (.asc)</div></div>
+            <div class="resource-arrow">→</div>
+          </a>
+          <a class="resource-card" href="https://drive.google.com/drive/folders/1L_GbQ4JuyXV2qwuFp5BtxL8-IuJByCP4" target="_blank">
+            <div class="resource-icon code">💻</div>
+            <div class="resource-info"><div class="resource-name">Arduino RX Source</div><div class="resource-meta">LI-FI_RX.ino + schematic (.asc)</div></div>
+            <div class="resource-arrow">→</div>
+          </a>
+          <a class="resource-card" href="https://drive.google.com/drive/folders/1L_GbQ4JuyXV2qwuFp5BtxL8-IuJByCP4" target="_blank">
+            <div class="resource-icon img">📷</div>
+            <div class="resource-info"><div class="resource-name">Full Photo Gallery</div><div class="resource-meta">33 images · Hi-res photos</div></div>
+            <div class="resource-arrow">→</div>
+          </a>
+          <a class="resource-card" href="https://drive.google.com/drive/folders/1L_GbQ4JuyXV2qwuFp5BtxL8-IuJByCP4" target="_blank">
+            <div class="resource-icon vid">🎬</div>
+            <div class="resource-info"><div class="resource-name">Demo Videos</div><div class="resource-meta">14 videos · System demos & tests</div></div>
+            <div class="resource-arrow">→</div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cs rv">
+      <div class="cs-num">08 / Learnings</div>
+      <h2 class="cs-title">What I'd Do Differently</h2>
+      <ul class="ll">
+        <li><strong>Use an integrated TIA IC like OPT101.</strong> The OPA388 + external 10pF works but requires careful
+          layout. An integrated solution would simplify dramatically.</li>
+        <li><strong>Add a 650nm bandpass optical filter</strong> to the RX. Fluorescent and sunlight interference
+          limited outdoor usability.</li>
+        <li><strong>Implement Manchester encoding.</strong> Plain UART has long same-level runs. Manchester guarantees
+          transitions every bit — self-clocking and DC-balanced.</li>
+        <li><strong>Plan the ground plane split from schematic stage.</strong> Adding split analog/digital ground as an
+          afterthought caused a crosstalk issue fixed with a bodge wire.</li>
+      </ul>
+    </div>
+
+    <div class="pnav rv">
+      <a class="btn btn-g" href="emi-system.html">← EMI System</a>
+      <a class="btn btn-g" href="../index.html#projects">All Projects ↗</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="fc">© 2025 Dikshit Maloo · Project: Li-Fi Optical Communication</div>
+    <div class="footer-social">
+      <a href="../index.html">Home</a>
+      <a href="mailto:dixitjain9455@gmail.com"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Email</a>
+      <a href="https://github.com/Dikshit8020" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+      <a href="https://www.linkedin.com/in/dikshit-maloo" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="../js/core.js"></script>
+  <script src="../js/lightbox.js"></script>
+</body>
+
+</html>

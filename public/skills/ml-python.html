@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ML & Python (Edge) — Dikshit Maloo</title>
+<meta name="description" content="Machine learning on edge devices — TensorFlow, TFLite, PyTorch on Raspberry Pi. 94% accuracy EMI classifier. NumPy, SciPy, Pandas for signal analysis.">
+<link rel="stylesheet" href="../css/design-system.css">
+<link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body class="col-purple">
+<div id="loading-screen"><div class="loader"><div class="loader-text">Loading...</div></div></div>
+<div id="cur"></div><div id="cur-t"></div>
+<div class="grid-bg"></div><div class="noise"></div><div class="scan"></div><div id="prog"></div>
+<nav><a class="nav-logo" href="../index.html"><div class="nav-dot"></div>DM</a><ul class="nav-links"><li><a href="../index.html#skills" class="active">Skills</a></li><li><a href="../index.html#projects">Projects</a></li><li><a href="../index.html#contact">Contact</a></li></ul><div class="social-icons"><a href="https://github.com/Dikshit8020" target="_blank" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg></a><a href="https://www.linkedin.com/in/dikshit-maloo" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div><button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button><a class="nav-btn" href="../index.html">← Back</a></nav>
+<div class="mobile-menu"><a href="../index.html">Home</a><a href="../index.html#skills">Skills</a><a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a></div>
+<button id="scroll-top" aria-label="Scroll to top">↑</button>
+<div class="breadcrumb"><a class="bc-link" href="../index.html">Home</a><span class="bc-sep">/</span><a class="bc-link" href="../index.html#skills">Skills</a><span class="bc-sep">/</span><span class="bc-cur">ML &amp; Python</span></div>
+
+<div class="sk-hero"><div class="dhbg dhbg-lifi"></div><div class="dh-orb" style="background:var(--purple)"></div>
+  <div class="sk-inner">
+    <div class="dh-cat">Growing Skill · Edge AI &amp; Data Science</div>
+    <h1 class="dh-title">ML &amp; Python<br><span style="color:var(--purple)">(Edge Computing)</span></h1>
+    <p class="dh-desc" style="margin-bottom:1.5rem">I use Python and ML not for web apps — but for making embedded systems smarter. TensorFlow on Raspberry Pi, INT8 quantization for real-time inference, and NumPy/SciPy for signal analysis.</p>
+    <div class="tags" style="margin-bottom:1.5rem"><span class="chip cv">TensorFlow</span><span class="chip cv">TFLite</span><span class="chip cv">PyTorch</span><span class="chip cv">Python</span><span class="chip cc">NumPy</span><span class="chip cc">SciPy</span><span class="chip ca">Pandas</span><span class="chip ca">Matplotlib</span></div>
+    <div class="sk-gauge-wrap">
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">Python</span><span class="sk-gp">75%</span></div><div class="sk-gt"><div class="sk-gf" data-width="75"></div></div></div>
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">TensorFlow / TFLite</span><span class="sk-gp">65%</span></div><div class="sk-gt"><div class="sk-gf" data-width="65"></div></div></div>
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">NumPy / SciPy</span><span class="sk-gp">70%</span></div><div class="sk-gt"><div class="sk-gf" data-width="70"></div></div></div>
+      <div class="sk-gr"><div class="sk-gl"><span class="sk-gn">Data Visualization</span><span class="sk-gp">68%</span></div><div class="sk-gt"><div class="sk-gf" data-width="68"></div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="sk-wrap">
+  <div class="sk-sec rv"><div class="sk-lbl">01 / Context</div><h2 class="sk-title">ML for Hardware Engineers</h2><div class="sk-body"><p>I approach ML differently from a software engineer. My interest is <strong>embedding intelligence into hardware systems</strong> — not building web services. The EMI project is the perfect example: a 4-class CNN that classifies electromagnetic interference sources in real-time on a ₹5000 Raspberry Pi, replacing a ₹50L lab instrument.</p><p>The key constraint is always <strong>inference speed and memory</strong>. A model that takes 2 seconds is useless for a real-time EMI scanner. INT8 quantization via TFLite got our model from 140ms to 12ms — fast enough to classify every sweep cycle.</p></div></div>
+
+  <div class="sk-sec rv"><div class="sk-lbl">02 / Libraries &amp; Tools</div><h2 class="sk-title">Python Ecosystem</h2>
+    <div class="plat-grid">
+      <div class="plat-c"><div class="plat-ico">🧠</div><div class="plat-name">TensorFlow / Keras</div><div class="plat-role">Model Training</div><div class="plat-desc">CNN architectures for signal classification. Sequential API. Model export to SavedModel and TFLite format.</div></div>
+      <div class="plat-c"><div class="plat-ico">📱</div><div class="plat-name">TFLite Runtime</div><div class="plat-role">Edge Inference</div><div class="plat-desc">INT8 quantized models on Raspberry Pi. 12ms inference time. Memory-efficient for embedded Linux.</div></div>
+      <div class="plat-c"><div class="plat-ico">📊</div><div class="plat-name">NumPy / SciPy</div><div class="plat-role">Signal Processing</div><div class="plat-desc">FFT analysis, digital filtering, spectral density estimation. Foundation for all EMI data processing.</div></div>
+      <div class="plat-c"><div class="plat-ico">📈</div><div class="plat-name">Matplotlib</div><div class="plat-role">Visualization</div><div class="plat-desc">Spectrum plots, training curves, confusion matrices. Publication-quality figures for project reports.</div></div>
+      <div class="plat-c"><div class="plat-ico">🗃️</div><div class="plat-name">Pandas</div><div class="plat-role">Data Management</div><div class="plat-desc">Sensor data logging, CSV processing, feature engineering for ML pipelines.</div></div>
+      <div class="plat-c"><div class="plat-ico">🔥</div><div class="plat-name">PyTorch</div><div class="plat-role">Research</div><div class="plat-desc">Learning for research projects. Custom layer design and dynamic computation graphs.</div></div>
+    </div>
+  </div>
+
+  <div class="sk-sec rv"><div class="sk-lbl">03 / Code Sample</div><h2 class="sk-title">CNN Architecture for EMI Classification</h2>
+    <div class="cb"><div class="cb-lbl"><span>// emi_model.py — TensorFlow CNN architecture</span><span>python</span></div>
+      <pre><span class="kw">import</span> tensorflow <span class="kw">as</span> tf
+
+model = tf.keras.Sequential([
+    <span class="cm"># Input: 1024-point FFT magnitude spectrum</span>
+    tf.keras.layers.Conv1D(<span class="nm">32</span>, <span class="nm">7</span>,
+        activation=<span class="st">'relu'</span>,
+        input_shape=(<span class="nm">1024</span>, <span class="nm">1</span>)),
+    tf.keras.layers.MaxPooling1D(<span class="nm">4</span>),
+    tf.keras.layers.Conv1D(<span class="nm">64</span>, <span class="nm">5</span>,
+        activation=<span class="st">'relu'</span>),
+    tf.keras.layers.MaxPooling1D(<span class="nm">4</span>),
+    tf.keras.layers.Conv1D(<span class="nm">64</span>, <span class="nm">3</span>,
+        activation=<span class="st">'relu'</span>),
+    tf.keras.layers.GlobalAveragePooling1D(),
+    tf.keras.layers.Dense(<span class="nm">64</span>, activation=<span class="st">'relu'</span>),
+    tf.keras.layers.Dropout(<span class="nm">0.3</span>),
+    tf.keras.layers.Dense(<span class="nm">4</span>, activation=<span class="st">'softmax'</span>)
+])
+
+model.compile(
+    optimizer=<span class="st">'adam'</span>,
+    loss=<span class="st">'categorical_crossentropy'</span>,
+    metrics=[<span class="st">'accuracy'</span>]
+)
+<span class="cm"># Result: 94% test accuracy after 50 epochs</span></pre>
+    </div>
+    <div class="hb hb-i"><div class="hb-lbl">Key Optimization: INT8 Quantization</div><div class="hb-txt">Post-training quantization via <code>tf.lite.TFLiteConverter</code> with representative dataset calibration reduced model size from 240KB to 65KB and inference time from 140ms to 12ms on RPi 4B — with only 0.8% accuracy loss.</div></div>
+  </div>
+
+  <div class="sk-sec rv"><div class="sk-lbl">04 / Work Showcase</div><h2 class="sk-title">ML &amp; Data Work</h2>
+    <div class="media-gallery">
+      <div class="media-item" data-lightbox="ml-work"><div class="imgp" style="height:180px"><div class="imgp-in"><div class="imgp-ico">📷</div><div class="imgp-txt">ADD: Training curves plot<br>or confusion matrix</div></div></div><div class="media-overlay"><div class="media-caption">EMI classifier training — accuracy vs epochs</div></div><div class="media-zoom">🔍</div></div>
+      <div class="media-item" data-lightbox="ml-work"><div class="imgp" style="height:180px"><div class="imgp-in"><div class="imgp-ico">📷</div><div class="imgp-txt">ADD: FFT spectrum plot<br>showing EMI sources</div></div></div><div class="media-overlay"><div class="media-caption">FFT spectrum — traction vs signalling EMI</div></div><div class="media-zoom">🔍</div></div>
+    </div>
+  </div>
+
+  <div class="sk-sec rv"><div class="sk-lbl">05 / Applied In</div><h2 class="sk-title">Projects Using This Skill</h2>
+    <div class="plc-grid">
+      <a class="plc" href="../projects/emi-system.html"><div><div class="plc-tag">TFLite CNN · 94% accuracy</div><div class="plc-name">EMI/EMC Measurement System</div></div><div class="plc-arr">→</div></a>
+    </div>
+  </div>
+  <div class="pnav rv"><a class="btn btn-g" href="communications.html">← Communications</a><a class="btn btn-g" href="test-equipment.html">Next: Test Equipment →</a></div>
+</div>
+<footer><div class="fc">© 2025 Dikshit Maloo · Skill: ML &amp; Python</div><div class="footer-social"><a href="../index.html">Home</a><a href="mailto:dixitjain9455@gmail.com">Email</a><a href="https://github.com/Dikshit8020" target="_blank">GitHub</a><a href="https://www.linkedin.com/in/dikshit-maloo" target="_blank">LinkedIn</a></div></footer>
+<script src="../js/core.js"></script><script src="../js/lightbox.js"></script>
+</body>
+</html>

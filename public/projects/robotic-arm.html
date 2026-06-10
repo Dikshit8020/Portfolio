@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>6-Axis Robotic Arm — Dikshit Maloo</title>
+<meta name="description" content="TIFAN 2025 National Finalist. 6-axis vegetable transplanter robot planting 40 seedlings/min. STM32 real-time control with FreeRTOS.">
+<link rel="stylesheet" href="../css/design-system.css">
+<link rel="stylesheet" href="../css/gallery.css">
+</head>
+<body class="col-cyan">
+<div id="loading-screen"><div class="loader"><div class="loader-text">Loading project...</div></div></div>
+<div id="cur"></div><div id="cur-t"></div>
+<div class="grid-bg"></div><div class="noise"></div><div class="scan"></div><div id="prog"></div>
+
+<nav>
+  <a class="nav-logo" href="../index.html"><div class="nav-dot"></div>DM</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#projects" class="active">Projects</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <div class="social-icons">
+    <a href="https://github.com/Dikshit8020" target="_blank" title="GitHub"><svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg></a>
+    <a href="https://www.linkedin.com/in/dikshit-maloo" target="_blank" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+  </div>
+  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <a class="nav-btn" href="../index.html">← Back</a>
+</nav>
+<div class="mobile-menu">
+  <a href="../index.html">Home</a><a href="../index.html#skills">Skills</a>
+  <a href="../index.html#projects">Projects</a><a href="../index.html#contact">Contact</a>
+</div>
+<button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+<div class="breadcrumb">
+  <a class="bc-link" href="../index.html">Home</a><span class="bc-sep">/</span>
+  <a class="bc-link" href="../index.html#projects">Projects</a><span class="bc-sep">/</span>
+  <span class="bc-cur">6-Axis Robotic Arm</span>
+</div>
+
+<!-- HERO -->
+<div class="detail-hero">
+  <div class="dhbg dhbg-robot"></div>
+  <div class="dh-orb" style="background:var(--cyan)"></div>
+  <div class="dh-inner">
+    <div class="dh-cat">TIFAN 2025 National Finalist · Agricultural Robotics</div>
+    <h1 class="dh-title">6-Axis Vegetable<br><span style="color:var(--cyan)">Transplanter Robot</span></h1>
+    <div class="dh-meta">
+      <div class="dh-mi"><div class="dh-ml">Role</div><div class="dh-mv" style="color:var(--amber)">Lead Firmware Engineer</div></div>
+      <div class="dh-mi"><div class="dh-ml">Duration</div><div class="dh-mv">8 Months · 2024–2025</div></div>
+      <div class="dh-mi"><div class="dh-ml">Speed</div><div class="dh-mv" style="color:var(--cyan)">40 Seedlings / Min</div></div>
+      <div class="dh-mi"><div class="dh-ml">Award</div><div class="dh-mv" style="color:var(--amber)">TIFAN National Finalist</div></div>
+    </div>
+    <div class="tags" style="margin-bottom:1.3rem">
+      <span class="chip cc">STM32F407</span><span class="chip cc">FreeRTOS</span>
+      <span class="chip cp">TMC5160</span><span class="chip cp">6-DOF</span>
+      <span class="chip ca">Inverse Kinematics</span><span class="chip cg">CAN Bus</span>
+    </div>
+    <p class="dh-desc">A high-speed 6-axis agricultural robot that autonomously picks seedlings from a tray and transplants them into the field at 40 seedlings per minute — 4× faster than manual labor. Designed from scratch: mechanical kinematics, STM32 firmware, stepper driver tuning, and FreeRTOS multi-axis coordination.</p>
+  </div>
+</div>
+
+<div class="detail-wrap">
+
+  <!-- 01 THE PROBLEM -->
+  <div class="cs rv">
+    <div class="cs-num">01 / The Problem</div>
+    <h2 class="cs-title">Why Automate Transplanting?</h2>
+    <div class="cs-body">
+      <p>Manual vegetable transplanting is <strong>back-breaking work</strong>. A skilled worker transplants ~10 seedlings per minute — hunched over, in direct sunlight, for 8 hours. In India, this costs ₹500–800/day per laborer, and labor shortages during peak season can mean entire crops are delayed.</p>
+      <p>Existing transplanting machines are <strong>tractor-mounted, costing ₹2-5 lakh</strong>, and can only handle specific seedling tray formats. Our goal: build a <strong>low-cost, portable, 6-axis robot</strong> that works with standard seedling trays and achieves 40+ seedlings/minute.</p>
+    </div>
+    <div class="hb hb-i">
+      <div class="hb-lbl">Engineering Challenge</div>
+      <div class="hb-txt">A 6-axis robot needs to coordinate 6 stepper motors simultaneously — each motor has different gear ratios, step counts, and acceleration profiles. If any axis arrives early or late, the gripper misses the seedling. The entire motion must complete in &lt;1.5 seconds per pick-and-place cycle.</div>
+    </div>
+  </div>
+
+  <!-- 02 THE IDEA -->
+  <div class="cs rv">
+    <div class="cs-num">02 / The Idea</div>
+    <h2 class="cs-title">The Design Approach</h2>
+    <div class="cs-body"><p>We chose a <strong>6-DOF articulated arm</strong> configuration rather than a Cartesian gantry. This gives maximum workspace flexibility — the arm can pick from a tray at one height and plant at a completely different angle. The entire system runs on a single STM32F407 MCU at 168MHz with FreeRTOS, where <strong>each joint axis runs its own RTOS task</strong> receiving target positions via queues.</p></div>
+
+    <!-- Architecture -->
+    <div class="arch">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--muted);margin-bottom:.9rem;letter-spacing:.08em">// SYSTEM ARCHITECTURE</div>
+      <div class="arch-row">
+        <div class="arch-block" style="border-color:rgba(0,229,255,.3)"><div class="arch-bt" style="color:var(--cyan)">STM32F407</div><div class="arch-bs">168MHz Cortex-M4<br>FreeRTOS 6 tasks</div></div>
+        <div class="arch-arr">→</div>
+        <div class="arch-block"><div class="arch-bt">TMC5160 ×6</div><div class="arch-bs">SPI config<br>StealthChop</div></div>
+        <div class="arch-arr">→</div>
+        <div class="arch-block"><div class="arch-bt">NEMA 17/23 ×6</div><div class="arch-bs">Stepper motors<br>Microstepping</div></div>
+      </div>
+      <div class="arch-div"></div>
+      <div class="arch-row">
+        <div class="arch-block"><div class="arch-bt">Limit Switches ×12</div><div class="arch-bs">Home calibration</div></div>
+        <div class="arch-arr">→</div>
+        <div class="arch-block" style="border-color:rgba(0,229,255,.3)"><div class="arch-bt" style="color:var(--cyan)">GPIO + EXTI</div><div class="arch-bs">Hardware interrupts</div></div>
+        <div class="arch-arr">→</div>
+        <div class="arch-block"><div class="arch-bt">Inverse Kinematics</div><div class="arch-bs">Cartesian → Joint<br>angles in real-time</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 JOURNEY -->
+  <div class="cs rv">
+    <div class="cs-num">03 / The Journey</div>
+    <h2 class="cs-title">Week by Week</h2>
+    <div class="jtl">
+      <div class="jt-item"><div class="jt-dot"></div><div class="jt-wk">Weeks 1–3</div><div class="jt-title">Mechanical Design &amp; 3D Printing</div><div class="jt-body">Designed 6-DOF arm in SolidWorks. 3D-printed link brackets, bearing housings. GT2 belt + NEMA 17 for axes 1-4, NEMA 23 for base. First assembly — joints too loose, 2mm backlash.</div><span class="jt-out jt-prog">⚡ Assembly complete. Backlash issue identified.</span></div>
+      <div class="jt-item"><div class="jt-dot"></div><div class="jt-wk">Weeks 4–6</div><div class="jt-title">Firmware v1: Bare-Metal Disaster</div><div class="jt-body">Wrote bare-metal step generation using Timer IRQs. Worked for 1 axis. At 6 axes, interrupt priority conflicts caused missed steps. Axis 3 would stall randomly during fast moves. Timing-critical code in main loop + 6 timer IRQs = unmanageable.</div><span class="jt-out jt-fail">❌ Bare-metal can't handle 6 simultaneous axes</span></div>
+      <div class="jt-item"><div class="jt-dot"></div><div class="jt-wk">Weeks 7–9</div><div class="jt-title">Migration to FreeRTOS</div><div class="jt-body">Rewrote entire firmware using FreeRTOS. Each axis = 1 task. Coordinator task computes IK, sends target steps to each axis queue. Axes run independently, signal completion via shared event group. No more interrupt conflicts.</div><span class="jt-out jt-ok">✓ 6 axes run smoothly. No missed steps.</span></div>
+      <div class="jt-item"><div class="jt-dot"></div><div class="jt-wk">Weeks 10–15</div><div class="jt-title">TMC5160 SPI Tuning &amp; StealthChop</div><div class="jt-body">Replaced A4988 drivers with TMC5160 — SPI-configurable, StealthChop for silent operation, automatic current scaling. Spent 3 weeks tuning: IRUN, IHOLD, TPWMTHRS, SGTHRS. Reduced motor heat from 80°C to 45°C. Stall detection via SPI StallGuard flag.</div><span class="jt-out jt-ok">✓ Silent, cool, stall-safe operation</span></div>
+      <div class="jt-item"><div class="jt-dot"></div><div class="jt-wk">Weeks 16–24</div><div class="jt-title">Gripper, IK, &amp; Speed Optimization</div><div class="jt-body">Designed pneumatic gripper for seedlings. Implemented inverse kinematics (geometric approach for 6-DOF). Optimized trapezoidal acceleration profiles to minimize cycle time. Final result: 40 seedlings/min with 98% pick success rate.</div><span class="jt-out jt-ok">✓ 40/min · 98% pick rate · TIFAN-ready</span></div>
+    </div>
+  </div>
+
+  <!-- 04 TECHNICAL -->
+  <div class="cs rv">
+    <div class="cs-num">04 / Technical Deep Dive</div>
+    <h2 class="cs-title">The Firmware Architecture</h2>
+
+    <div class="cb">
+      <div class="cb-lbl"><span>// axis_task.c — FreeRTOS motor control task</span><span>embedded_c</span></div>
+      <pre><span class="cm">/* One instance runs per axis (6 total).
+   Receives target step count via xAxisQueue[id].
+   Signals completion via xCompletionQueue. */</span>
+
+<span class="ty">void</span> <span class="fn">vAxisTask</span>(<span class="ty">void</span> *pvParams) {
+    <span class="ty">AxisHandle_t</span> *axis = (<span class="ty">AxisHandle_t</span>*)pvParams;
+    <span class="ty">int32_t</span> target_steps;
+
+    <span class="kw">for</span>(;;) {
+        <span class="cm">/* Block until coordinator sends target */</span>
+        xQueueReceive(xAxisQueue[axis->id],
+                      &target_steps, portMAX_DELAY);
+
+        <span class="ty">int32_t</span> delta = target_steps - axis->current_steps;
+        axis->direction = (delta > <span class="nm">0</span>) ? DIR_CW : DIR_CCW;
+        HAL_GPIO_WritePin(axis->dir_port, axis->dir_pin,
+                          axis->direction);
+
+        <span class="cm">/* Trapezoidal acceleration profile */</span>
+        <span class="ty">uint32_t</span> total  = abs(delta);
+        <span class="ty">uint32_t</span> ramp   = total / <span class="nm">4</span>;
+        <span class="ty">uint32_t</span> cruise  = total - <span class="nm">2</span> * ramp;
+        <span class="ty">uint32_t</span> delay_us = axis->max_delay;
+
+        <span class="kw">for</span>(<span class="ty">uint32_t</span> i = <span class="nm">0</span>; i < total; i++) {
+            HAL_GPIO_WritePin(axis->step_port,
+                              axis->step_pin, GPIO_PIN_SET);
+            <span class="fn">delay_us_precise</span>(delay_us);
+            HAL_GPIO_WritePin(axis->step_port,
+                              axis->step_pin, GPIO_PIN_RESET);
+            <span class="fn">delay_us_precise</span>(delay_us);
+
+            <span class="kw">if</span>(i < ramp)
+                delay_us -= axis->accel_delta;
+            <span class="kw">else if</span>(i >= ramp + cruise)
+                delay_us += axis->accel_delta;
+        }
+
+        axis->current_steps = target_steps;
+        xQueueSend(xCompletionQueue, &axis->id,
+                   portMAX_DELAY);
+    }
+}</pre>
+    </div>
+
+    <div class="hb hb-p">
+      <div class="hb-lbl">The RTOS Sync Problem We Solved</div>
+      <div class="hb-txt">The coordinator task must wait for <strong>all 6 axes</strong> to finish before commanding the next waypoint. We used an <code>EventGroup</code> with 6 bits — each axis task sets its bit on completion. The coordinator blocks on <code>xEventGroupWaitBits(ALL_AXES_MASK)</code>. This is cleaner than counting semaphores and handles the case where some axes have zero movement (they set their bit immediately).</div>
+    </div>
+  </div>
+
+  <!-- 05 RESULTS -->
+  <div class="cs rv">
+    <div class="cs-num">05 / Results</div>
+    <h2 class="cs-title">What Was Achieved</h2>
+    <div class="rs">
+      <div class="rs-c"><span class="rs-n">40<span style="font-size:1.5rem">/min</span></span><div class="rs-l">Transplanting Speed</div></div>
+      <div class="rs-c"><span class="rs-n">6<span style="font-size:1.5rem">-DOF</span></span><div class="rs-l">Articulated Axes</div></div>
+      <div class="rs-c"><span class="rs-n">98<span style="font-size:1.5rem">%</span></span><div class="rs-l">Pick Success Rate</div></div>
+    </div>
+    <div class="cs-body"><p>Selected as <strong>National Finalist at TIFAN 2025</strong> (Technology in Farming, Agriculture &amp; Nutrition). The robot demonstrated reliable autonomous operation across multiple seedling tray types and soil conditions. Total BOM cost: ~₹25,000.</p></div>
+  </div>
+
+  <!-- 06 MEDIA GALLERY -->
+  <div class="cs rv">
+    <div class="cs-num">06 / Gallery</div>
+    <h2 class="cs-title">Project <span style="color:var(--cyan)">Media</span></h2>
+    <p class="cs-body" style="margin-bottom:1.5rem">Photos and videos of the robot in action — assembly, PCB, gripper mechanism, and live demo runs at TIFAN 2025.</p>
+
+    <div class="gallery-section">
+      <div class="section-label">📸 PROJECT IMAGES & VIDEOS</div>
+      <div class="drive-embed-container">
+        <iframe src="https://drive.google.com/embeddedfolderview?id=14XuMKq2iJaA1jtvSkAdnc7sdgaUDzYyC#grid" loading="lazy"></iframe>
+      </div>
+      <a class="btn-view-all" href="https://drive.google.com/drive/folders/14XuMKq2iJaA1jtvSkAdnc7sdgaUDzYyC?usp=share_link" target="_blank">📂 Open Full Gallery in Drive <span class="arrow">→</span></a>
+    </div>
+
+    <div class="gallery-section" style="margin-top:2.5rem">
+      <div class="section-label">📦 PROJECT RESOURCES</div>
+      <div class="resource-grid">
+        <a class="resource-card" href="https://drive.google.com/drive/folders/14XuMKq2iJaA1jtvSkAdnc7sdgaUDzYyC?usp=share_link" target="_blank">
+          <div class="resource-icon code">💻</div>
+          <div class="resource-info">
+            <div class="resource-name">PlatformIO Source Code</div>
+            <div class="resource-meta">main software · Embedded C</div>
+          </div>
+          <div class="resource-arrow">→</div>
+        </a>
+        <a class="resource-card" href="https://drive.google.com/drive/folders/14XuMKq2iJaA1jtvSkAdnc7sdgaUDzYyC?usp=share_link" target="_blank">
+          <div class="resource-icon vid">🎬</div>
+          <div class="resource-info">
+            <div class="resource-name">Demo Videos</div>
+            <div class="resource-meta">3 videos · Robot in action</div>
+          </div>
+          <div class="resource-arrow">→</div>
+        </a>
+        <a class="resource-card" href="https://drive.google.com/drive/folders/14XuMKq2iJaA1jtvSkAdnc7sdgaUDzYyC?usp=share_link" target="_blank">
+          <div class="resource-icon img">📷</div>
+          <div class="resource-info">
+            <div class="resource-name">Assembly Photos</div>
+            <div class="resource-meta">6 high-res images</div>
+          </div>
+          <div class="resource-arrow">→</div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 07 LEARNINGS -->
+  <div class="cs rv">
+    <div class="cs-num">07 / Learnings</div>
+    <h2 class="cs-title">What I'd Do Differently</h2>
+    <ul class="ll">
+      <li><strong>Use closed-loop steppers.</strong> Open-loop NEMA motors lose steps under heavy load. Adding magnetic encoders (AS5600) would allow the firmware to detect and correct stalls in real-time, eliminating the need for conservative speed limits.</li>
+      <li><strong>Move inverse kinematics to a lookup table.</strong> Computing IK on-the-fly at 168MHz works but limits cycle time. Pre-computing a 3D lookup table for all tray positions would cut IK computation from 2ms to 200µs per waypoint.</li>
+      <li><strong>Add CAN bus between driver boards.</strong> Currently all 6 TMC5160s share one SPI bus, creating a bottleneck. With CAN, each driver could run on its own node, enabling truly parallel step generation.</li>
+      <li><strong>Design a custom PCB earlier.</strong> We ran on breadboard + breakout boards for too long. The wire inductance caused noise on the SPI bus that corrupted TMC5160 register writes. A proper 4-layer PCB from week 8 would have saved 3 weeks of debugging.</li>
+    </ul>
+  </div>
+
+  <div class="pnav rv">
+    <a class="btn btn-g" href="../index.html#projects">← All Projects</a>
+    <a class="btn btn-g" href="emi-system.html">Next: EMI System →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="fc">© 2025 Dikshit Maloo · Project: 6-Axis Robotic Arm</div>
+  <div class="footer-social">
+    <a href="../index.html">Home</a>
+    <a href="mailto:dixitjain9455@gmail.com"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Email</a>
+    <a href="https://github.com/Dikshit8020" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg> GitHub</a>
+    <a href="https://www.linkedin.com/in/dikshit-maloo" target="_blank"><svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+  </div>
+</footer>
+
+<script src="../js/core.js"></script>
+<script src="../js/lightbox.js"></script>
+</body>
+</html>
